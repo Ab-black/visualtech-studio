@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VisualTech Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <nav>
         <div class="logo">
             VisualTech Studio
@@ -19,22 +23,94 @@
 
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-<div class="hero-content">
+    <!-- Hero Section -->
+    <section class="hero">
 
-    <h1>
-        Design That Captures Attention.
-        Websites That Drive Results.
-    </h1>
+        <div class="hero-content">
 
-    <p>
-        VisualTech Studio helps businesses grow through
+            <h1>
+                Design That Captures Attention.
+                Websites That Drive Results.
+            </h1>
+
+            <p>
+                VisualTech Studio helps businesses grow through
+                strategic graphic design, branding, and modern
+                web development.
+            </p>
+
+            <div class="buttons">
+                <a href="#portfolio" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Let's Talk</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+
+        <h2>About VisualTech Studio</h2>
+
+        <p>
+            VisualTech Studio is a creative digital studio focused on helping
+            businesses establish a strong visual identity and professional
+            online presence.
+
+            We combine creative graphic design with modern web development
+            to create solutions that help businesses attract customers and
+            build credibility.
+        </p>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+
+        <h2>What We Do</h2>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <p>
+                    Logos, flyers, posters, social media graphics,
+                    and complete brand identity systems.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>
+                    Fast, modern, and responsive websites
+                    built for businesses.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>
+                    User-focused interfaces that improve
+                    customer experience.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>        VisualTech Studio helps businesses grow through
         strategic graphic design, branding, and modern
         web development.
     </p>

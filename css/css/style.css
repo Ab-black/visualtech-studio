@@ -1,173 +1,286 @@
-/* VisualTech Studio Styles */
+/* =========================
+VISUALTECH STUDIO
+PROFESSIONAL CSS
+========================= */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
-    background:#0f172a;
-    color:white;
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
+/* =========================
+NAVIGATION
+========================= */
+
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+flex-wrap:wrap;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
+font-size:1.6rem;
+font-weight:700;
+color:white;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+display:flex;
+list-style:none;
+gap:30px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
 
+nav a:hover{
+color:#3b82f6;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 10%;
-    background:
-    radial-gradient(circle at top right,
-    rgba(37,99,235,.25),
-    transparent 40%);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+background:
+radial-gradient(
+circle at top right,
+rgba(37,99,235,.25),
+transparent 40%
+);
+}
+
+.hero-content{
+max-width:1000px;
 }
 
 .hero h1{
-    font-size:4rem;
-    max-width:900px;
+font-size:clamp(2.5rem,6vw,5rem);
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .hero p{
-    margin-top:20px;
-    max-width:700px;
-    font-size:1.2rem;
+max-width:700px;
+margin:auto;
+font-size:1.2rem;
+color:#cbd5e1;
 }
 
+/* =========================
+BUTTONS
+========================= */
+
 .buttons{
-    margin-top:30px;
+margin-top:35px;
 }
 
 .btn-primary,
 .btn-secondary{
-    display:inline-block;
-    padding:14px 30px;
-    margin:10px;
-    border-radius:8px;
-    text-decoration:none;
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+transition:0.3s;
+font-weight:600;
 }
 
 .btn-primary{
-    background:#2563eb;
-    color:white;
+background:#2563eb;
+color:white;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
 }
 
 .btn-secondary{
-    border:1px solid white;
-    color:white;
+border:1px solid white;
+color:white;
 }
+
+.btn-secondary:hover{
+background:white;
+color:#0f172a;
+}
+
+/* =========================
+STATS
+========================= */
+
+.stats{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.stats h3{
+font-size:2rem;
+color:#3b82f6;
+}
+
+.stats p{
+color:#cbd5e1;
+}
+
+/* =========================
+ABOUT SECTION
+========================= */
+
 .about{
-    padding:100px 10%;
-    text-align:center;
+padding:100px 10%;
+text-align:center;
+max-width:1200px;
+margin:auto;
 }
 
 .about h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
+font-size:2.5rem;
+margin-bottom:20px;
 }
 
 .about p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+max-width:800px;
+margin:auto;
+line-height:1.9;
+color:#cbd5e1;
 }
 
-.skills{
-    margin-top:50px;
-    display:flex;
+/* =========================
+SERVICES
+========================= */
+
+.services{
+padding:100px 10%;
+text-align:center;
+}
+
+.services h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.service-grid{
+margin-top:50px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.service-card{
+width:320px;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card h3{
+margin-bottom:15px;
+}
+
+.service-card p{
+color:#cbd5e1;
+}
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+nav{
+    flex-direction:column;
     gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
+    text-align:center;
 }
 
-.skill-card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:10px;
-    width:300px;
+nav ul{
+    flex-direction:column;
+    gap:15px;
 }
 
-.skill-card h3{
-    margin-bottom:15px;
+.hero{
+    min-height:auto;
+    padding:80px 20px;
 }
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn-primary,
+.btn-secondary{
+    width:220px;
+    text-align:center;
+}
+
 .about,
 .services{
-    padding:100px 10%;
-    text-align:center;
+    padding:70px 20px;
 }
 
 .about h2,
 .services h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
-}
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+    font-size:2rem;
 }
 
 .service-grid{
-    margin-top:50px;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
 }
 
 .service-card{
-    width:320px;
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
-    transition:0.3s;
+    width:100%;
+    max-width:350px;
 }
 
-.service-card:hover{
-    transform:translateY(-10px);
-}
-
-.service-card h3{
-    margin-bottom:15px;
-}
 .stats{
-    margin-top:60px;
-    display:flex;
-    gap:50px;
-    justify-content:center;
-    flex-wrap:wrap;
+    flex-direction:column;
+    gap:25px;
 }
 
-.stats h3{
-    font-size:2rem;
-    color:#3b82f6;
-}
-
-.stats p{
-    margin-top:5px;
 }

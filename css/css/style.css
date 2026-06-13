@@ -35,13 +35,16 @@ nav a{
 }
 
 .hero{
-    min-height:80vh;
+    min-height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:0 10%;
+    background:
+    radial-gradient(circle at top right,
+    rgba(37,99,235,.25),
+    transparent 40%);
 }
 
 .hero h1{
@@ -151,4 +154,20 @@ nav a{
 
 .service-card h3{
     margin-bottom:15px;
+}
+.stats{
+    margin-top:60px;
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.stats h3{
+    font-size:2rem;
+    color:#3b82f6;
+}
+
+.stats p{
+    margin-top:5px;
 }
